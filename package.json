@@ -17,13 +17,15 @@
   "scripts": {
     "dev": "microbundle watch",
     "build": "microbundle",
-    "test": "node bin/test.js"
+    "test": "standard \"src/**/*.js\" | snazzy && node bin/test.js"
   },
   "version": "0.0.0",
   "devDependencies": {
     "@japa/expect": "^3.0.0-1",
     "@japa/runner": "^3.0.0-9",
     "microbundle": "^0.15.1",
+    "snazzy": "^9.0.0",
+    "standard": "^17.1.0",
     "ts-node": "^10.9.2",
     "typescript": "^5.3.3"
   },
