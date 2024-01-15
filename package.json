@@ -1,0 +1,31 @@
+{
+  "name": "@looplex/analysis-utils",
+  "type": "module",
+  "description": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/looplex/analysis-utils"
+  },
+  "source": "./src/index.js",
+  "exports": {
+    "require": "./dist/utils.cjs",
+    "default": "./dist/utils.modern.js"
+  },
+  "main": "./dist/utils.cjs",
+  "module": "./dist/utils.mjs",
+  "unpkg": "./dist/utils.umd.js",
+  "scripts": {
+    "dev": "microbundle watch",
+    "build": "microbundle",
+    "test": "node bin/test.js"
+  },
+  "version": "0.0.0",
+  "devDependencies": {
+    "@japa/expect": "^3.0.0-1",
+    "@japa/runner": "^3.0.0-9",
+    "microbundle": "^0.15.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
+  },
+  "author": "Fabio Zendhi Nagao"
+}
