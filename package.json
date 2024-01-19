@@ -15,19 +15,33 @@
   "module": "./dist/utils.mjs",
   "unpkg": "./dist/utils.umd.js",
   "scripts": {
-    "dev": "microbundle watch",
     "build": "microbundle",
-    "test": "standard \"src/**/*.js\" | snazzy && node bin/test.js"
+    "dev": "microbundle watch",
+    "cz": "cz",
+    "prepare": "husky install",
+    "release": "standard-version",
+    "test": "standard \"src/**/*.js\" | snazzy && node bin/tests-runner.js"
   },
   "version": "0.0.0",
   "devDependencies": {
+    "@commitlint/cli": "^18.4.4",
+    "@commitlint/config-conventional": "^18.4.4",
     "@japa/expect": "^3.0.0-1",
     "@japa/runner": "^3.0.0-9",
+    "commitizen": "^4.3.0",
+    "cz-conventional-changelog": "^3.3.0",
+    "husky": "^8.0.0",
     "microbundle": "^0.15.1",
     "snazzy": "^9.0.0",
     "standard": "^17.1.0",
+    "standard-version": "^9.5.0",
     "ts-node": "^10.9.2",
     "typescript": "^5.3.3"
   },
-  "author": "Fabio Zendhi Nagao"
+  "author": "Fabio Zendhi Nagao",
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
 }
