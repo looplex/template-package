@@ -23,7 +23,7 @@
     "dev": "microbundle watch",
     "cz": "cz",
     "prepare": "husky install",
-    "prepublish": "microbundle && standard-version",
+    "prerelease": "microbundle && standard-version",
     "test": "standard \"src/**/*.js\" | snazzy && node bin/tests-runner.js"
   },
   "version": "0.0.1",
