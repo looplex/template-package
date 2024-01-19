@@ -7,19 +7,23 @@
     "url": "https://github.com/looplex/analysis-utils"
   },
   "source": "./src/index.js",
+  "main": "./dist/utils.cjs",
+  "umd:main": "./dist/utils.umd.js",
+  "module": "./dist/utils.mjs",
   "exports": {
     "require": "./dist/utils.cjs",
     "default": "./dist/utils.modern.js"
   },
-  "main": "./dist/utils.cjs",
-  "module": "./dist/utils.mjs",
-  "unpkg": "./dist/utils.umd.js",
+  "files": [
+    "CHANGELOG.md",
+    "./dist/*"
+  ],
   "scripts": {
     "build": "microbundle",
     "dev": "microbundle watch",
     "cz": "cz",
     "prepare": "husky install",
-    "release": "standard-version",
+    "prepublish": "microbundle && standard-version",
     "test": "standard \"src/**/*.js\" | snazzy && node bin/tests-runner.js"
   },
   "version": "0.0.1",
