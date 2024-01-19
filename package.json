@@ -24,7 +24,7 @@
     "cz": "cz",
     "prepare": "husky install",
     "prerelease": "microbundle && standard-version",
-    "test": "standard \"src/**/*.js\" | snazzy && node bin/tests-runner.js"
+    "test": "standard \"src/**/*.js\" | snazzy && c8 node bin/tests-runner.js"
   },
   "version": "0.0.1",
   "devDependencies": {
@@ -32,6 +32,7 @@
     "@commitlint/config-conventional": "^18.4.4",
     "@japa/expect": "^3.0.0-1",
     "@japa/runner": "^3.0.0-9",
+    "c8": "^9.1.0",
     "commitizen": "^4.3.0",
     "cz-conventional-changelog": "^3.3.0",
     "husky": "^8.0.0",
